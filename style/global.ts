@@ -19,4 +19,17 @@ export default createGlobalStyle`
 	*, *:before, *:after {
   	box-sizing: inherit;
 	}
+
+	body {
+		font-size: 1.6rem;
+		font-family: 'Karla', sans-serif;
+		font-weight: 400;
+		color: #010822;
+	}
+
+	h1,h2,h3,h4,h5,h6 {
+		font-family: 'Rubik', sans-serif;
+	}
+	
+	input, select, textarea, button{font-family:inherit;}
 `
