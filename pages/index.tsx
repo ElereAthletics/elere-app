@@ -1,5 +1,5 @@
 import { BtnSecondary, Button, Container } from '@components/atoms'
-import { Navbar, Notice } from '@components/molecules'
+import { Footer, Navbar, Notice } from '@components/molecules'
 import Image from 'next/image'
 import { media } from 'style'
 import styled from 'styled-components'
@@ -60,6 +60,9 @@ const HeaderContent = styled.div`
 `
 
 const HeaderImg = styled.div`
+	height: 100%;
+	position: relative;
+
 	${media.md} {
 		display: none;
 	}
@@ -90,6 +93,118 @@ const StepsSection = styled.section`
 	${Container} {
 		padding-top: 12rem;
 		padding-bottom: 12rem;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		column-gap: 5rem;
+	}
+`
+const StepsTitle = styled.h2`
+	font-size: 6.5rem;
+	text-transform: uppercase;
+	font-weight: 500;
+`
+const StepsGrid = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 5rem;
+	row-gap: 5rem;
+`
+
+const StepsItem = styled.div``
+
+const StepsIcon = styled.div`
+	background-color: ${({ theme }) => theme.colors.blue};
+	width: 80px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100px;
+	margin-bottom: 2.5rem;
+`
+
+const StepsItemTitle = styled.p`
+	font-size: 2rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 1rem;
+`
+const StepsItemDesc = styled.p`
+	font-size: 1.6rem;
+	color: #7e7e7e;
+`
+
+const WhySection = styled.section`
+	position: relative;
+`
+
+const WhyMain = styled.div`
+	height: 80rem;
+	background-color: #f8f8f8;
+
+	${media.md} {
+		background-color: rgba(255, 255, 255, 0.9);
+	}
+
+	${Container} {
+		display: grid;
+		grid-template-columns: 2fr 3fr;
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+		align-items: center;
+
+		${media.md} {
+			grid-template-columns: 1fr;
+		}
+	}
+`
+
+const WhyContent = styled.div``
+
+const WhyImg = styled.div`
+	height: 100%;
+	position: relative;
+
+	${media.md} {
+		display: none;
+	}
+`
+const WhyTitle = styled.h2`
+	font-size: 6.5rem;
+	text-transform: uppercase;
+	font-weight: 500;
+	margin-bottom: 2.5rem;
+`
+
+const WhyText = styled.p`
+	font-size: 1.8rem;
+	color: #7e7e7e;
+	margin-bottom: 2rem;
+
+	span {
+		color: ${({ theme }) => theme.colors.blue};
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+`
+
+const WhySubTitle = styled.p`
+	font-weight: 700;
+	font-size: 2rem;
+	margin-bottom: 1.6rem;
+	text-transform: uppercase;
+	margin-top: 3rem;
+`
+
+const WhyBackImg = styled.div`
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	display: none;
+
+	${media.md} {
+		display: block;
 	}
 `
 
@@ -115,15 +230,82 @@ const Home = () => {
 								<HeaderBtn size='lg'>get started</HeaderBtn>
 							</HeaderContent>
 							<HeaderImg>
-								<Image src='/images/hero.png' width={1165} height={1214} />
+								<Image src='/images/hero.png' layout='fill' objectFit='contain' />
 							</HeaderImg>
 						</Container>
 					</HeaderContainer>
 				</HeaderMain>
 			</Header>
 			<StepsSection>
-				<Container>Hello</Container>
+				<Container>
+					<StepsTitle>how it works</StepsTitle>
+					<StepsGrid>
+						<StepsItem>
+							<StepsIcon>
+								<img src='/images/dumbbell.svg' />
+							</StepsIcon>
+							<StepsItemTitle>Choose your fitness activity</StepsItemTitle>
+							<StepsItemDesc>
+								Choose a fitness activity from various options to see which best meets your goals
+								and interests
+							</StepsItemDesc>
+						</StepsItem>
+						<StepsItem>
+							<StepsIcon>
+								<img src='/images/dollar.svg' />
+							</StepsIcon>
+							<StepsItemTitle>Choose your Price point</StepsItemTitle>
+							<StepsItemDesc>
+								Choose from 3 different price points to see which suits your budget and needs the
+								best
+							</StepsItemDesc>
+						</StepsItem>
+						<StepsItem>
+							<StepsIcon>
+								<img src='/images/shirts.svg' />
+							</StepsIcon>
+							<StepsItemTitle>Customize your bundle</StepsItemTitle>
+							<StepsItemDesc>
+								Curate your bundle to your likes and needs. Mix and match size, colour and style.{' '}
+							</StepsItemDesc>
+						</StepsItem>
+						<StepsItem>
+							<StepsIcon>
+								<img src='/images/box.svg' />
+							</StepsIcon>
+							<StepsItemTitle>start your journey</StepsItemTitle>
+							<StepsItemDesc>
+								Get everything you need in a couple clicks, delivered to your door in 5 days.
+							</StepsItemDesc>
+						</StepsItem>
+					</StepsGrid>
+				</Container>
 			</StepsSection>
+			<WhySection>
+				<WhyBackImg>
+					<Image src='/images/why-background.png' layout='fill' objectFit='cover' quality={50} />
+				</WhyBackImg>
+				<WhyMain>
+					<Container>
+						<WhyContent>
+							<WhyTitle>why us?</WhyTitle>
+							<WhyText>
+								<span>Elere</span> is a platform created to make it easier for you to{' '}
+								<span>start</span>.
+							</WhyText>
+							<WhyText>
+								Whatever your goals and desires are, wherever along the process you are, we want to
+								help you reach the <span>finish</span>.
+							</WhyText>
+							<WhySubTitle>Our three pillars are</WhySubTitle>
+						</WhyContent>
+						<WhyImg>
+							<Image src='/images/why.png' layout='fill' objectFit='contain' />
+						</WhyImg>
+					</Container>
+				</WhyMain>
+			</WhySection>
+			<Footer />
 		</>
 	)
 }
