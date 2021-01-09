@@ -127,13 +127,17 @@ const StepsItem = styled.div``
 
 const StepsIcon = styled.div`
 	background-color: ${({ theme }) => theme.colors.blue};
-	width: 80px;
-	height: 80px;
+	width: 8rem;
+	height: 8rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 100px;
 	margin-bottom: 2.5rem;
+
+	img {
+		height: 3.5rem;
+	}
 
 	${media.sm} {
 		margin-right: auto;
@@ -237,6 +241,36 @@ const FeaturedSection = styled.section`
 	}
 `
 
+const Pillar = styled.div`
+	display: flex;
+
+	&:not(:last-child) {
+		margin-right: 2.5rem;
+	}
+`
+
+const PillarText = styled.p`
+	font-size: 1.8rem;
+	color: #4e4e4e;
+`
+
+const PillarsContainer = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+
+	${media.sm} {
+		justify-content: center;
+	}
+
+	p {
+		margin-right: 1rem;
+	}
+
+	img {
+		height: 1.6rem;
+	}
+`
+
 const Home = () => {
 	return (
 		<>
@@ -333,6 +367,20 @@ const Home = () => {
 								help you reach the <span>finish</span>.
 							</WhyText>
 							<WhySubTitle>Our three pillars are</WhySubTitle>
+							<PillarsContainer>
+								<Pillar>
+									<PillarText>Affordability</PillarText>
+									<img src='/images/check.svg' />
+								</Pillar>
+								<Pillar>
+									<PillarText>Convenience</PillarText>
+									<img src='/images/check.svg' />
+								</Pillar>
+								<Pillar>
+									<PillarText>Simplicity</PillarText>
+									<img src='/images/check.svg' />
+								</Pillar>
+							</PillarsContainer>
 						</WhyContent>
 						<WhyImg>
 							<Image src='/images/why.png' layout='fill' objectFit='contain' />
