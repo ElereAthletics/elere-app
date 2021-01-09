@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import media from './media'
 
 export default createGlobalStyle`
 	* {
@@ -14,6 +15,26 @@ export default createGlobalStyle`
 	html {
   	box-sizing: border-box;
 		font-size: 62.5%;
+
+		${media.xl} {
+			font-size: 60%;
+		}
+
+		${media.lg} {
+			font-size: 56%;
+		}
+
+		${media.md} {
+			font-size: 52%;
+		}
+
+		${media.sm} {
+			font-size: 46%;
+		}
+
+		${media.xs} {
+			font-size: 40%;
+		}
 	}
 
 	*, *:before, *:after {

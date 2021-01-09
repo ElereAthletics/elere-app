@@ -96,18 +96,31 @@ const StepsSection = styled.section`
 		display: grid;
 		grid-template-columns: 1fr 2fr;
 		column-gap: 5rem;
+
+		${media.sm} {
+			grid-template-columns: 1fr;
+			row-gap: 7.5rem;
+		}
 	}
 `
 const StepsTitle = styled.h2`
 	font-size: 6.5rem;
 	text-transform: uppercase;
 	font-weight: 500;
+
+	${media.sm} {
+		text-align: center;
+	}
 `
 const StepsGrid = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	column-gap: 5rem;
 	row-gap: 5rem;
+
+	${media.sm} {
+		text-align: center;
+	}
 `
 
 const StepsItem = styled.div``
@@ -121,6 +134,11 @@ const StepsIcon = styled.div`
 	justify-content: center;
 	border-radius: 100px;
 	margin-bottom: 2.5rem;
+
+	${media.sm} {
+		margin-right: auto;
+		margin-left: auto;
+	}
 `
 
 const StepsItemTitle = styled.p`
@@ -156,6 +174,10 @@ const WhyMain = styled.div`
 		${media.md} {
 			grid-template-columns: 1fr;
 		}
+
+		${media.sm} {
+			text-align: center;
+		}
 	}
 `
 
@@ -178,7 +200,7 @@ const WhyTitle = styled.h2`
 
 const WhyText = styled.p`
 	font-size: 1.8rem;
-	color: #7e7e7e;
+	color: #4e4e4e;
 	margin-bottom: 2rem;
 
 	span {
@@ -208,13 +230,26 @@ const WhyBackImg = styled.div`
 	}
 `
 
+const FeaturedSection = styled.section`
+	${Container} {
+		padding-top: 15rem;
+		padding-bottom: 15rem;
+	}
+`
+
 const Home = () => {
 	return (
 		<>
 			<Notice />
 			<Header>
 				<HeaderBackground>
-					<Image src='/images/hero-background.png' layout='fill' objectFit='cover' quality={50} />
+					<Image
+						src='/images/hero-background.png'
+						layout='fill'
+						objectFit='cover'
+						quality={50}
+						priority
+					/>
 				</HeaderBackground>
 				<HeaderMain>
 					<Navbar />
@@ -305,6 +340,9 @@ const Home = () => {
 					</Container>
 				</WhyMain>
 			</WhySection>
+			<FeaturedSection>
+				<Container>Hello</Container>
+			</FeaturedSection>
 			<Footer />
 		</>
 	)
