@@ -1,5 +1,6 @@
 import { BtnSecondary, Button, Container } from '@components/atoms'
 import { Footer, Navbar, Notice } from '@components/molecules'
+import Head from 'next/head'
 import Image from 'next/image'
 import { media } from 'style'
 import styled from 'styled-components'
@@ -274,6 +275,9 @@ const PillarsContainer = styled.div`
 const Home = () => {
 	return (
 		<>
+			<Head>
+				<title>Elere | Home</title>
+			</Head>
 			<Notice />
 			<Header>
 				<HeaderBackground>
