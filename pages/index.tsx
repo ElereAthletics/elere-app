@@ -1,5 +1,5 @@
 import { BtnSecondary, Button, Container } from '@components/atoms'
-import { Footer, Navbar, Notice } from '@components/molecules'
+import { FeaturedCard, Footer, Navbar, Notice } from '@components/molecules'
 import Head from 'next/head'
 import Image from 'next/image'
 import { media } from 'style'
@@ -124,7 +124,9 @@ const StepsGrid = styled.div`
 	}
 `
 
-const StepsItem = styled.div``
+const StepsItem = styled.div`
+	font-size: 1.8rem;
+`
 
 const StepsIcon = styled.div`
 	background-color: ${({ theme }) => theme.colors.blue};
@@ -153,7 +155,6 @@ const StepsItemTitle = styled.p`
 	margin-bottom: 1rem;
 `
 const StepsItemDesc = styled.p`
-	font-size: 1.6rem;
 	color: #7e7e7e;
 `
 
@@ -199,7 +200,7 @@ const WhyImg = styled.div`
 const WhyTitle = styled.h2`
 	font-size: 6.5rem;
 	text-transform: uppercase;
-	font-weight: 500;
+	font-weight: 700;
 	margin-bottom: 2.5rem;
 `
 
@@ -235,15 +236,9 @@ const WhyBackImg = styled.div`
 	}
 `
 
-const FeaturedSection = styled.section`
-	${Container} {
-		padding-top: 15rem;
-		padding-bottom: 15rem;
-	}
-`
-
 const Pillar = styled.div`
 	display: flex;
+	align-items: center;
 
 	&:not(:last-child) {
 		margin-right: 2.5rem;
@@ -258,6 +253,7 @@ const PillarText = styled.p`
 const PillarsContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
+	row-gap: 1rem;
 
 	${media.sm} {
 		justify-content: center;
@@ -269,6 +265,61 @@ const PillarsContainer = styled.div`
 
 	img {
 		height: 1.6rem;
+	}
+`
+
+const FeaturedSection = styled.section`
+	${Container} {
+		padding-top: 15rem;
+		padding-bottom: 15rem;
+		display: flex;
+		justify-content: center;
+	}
+`
+
+const FeaturedGrid = styled.section`
+	width: 100%;
+	max-width: 80rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 7.5rem;
+	row-gap: 7rem;
+
+	${media.xs} {
+		grid-template-columns: 1fr;
+		max-width: 40rem;
+		text-align: center;
+	}
+`
+
+const FeaturedMain = styled.div``
+
+const FeaturedTitle = styled.h2`
+	font-size: 6.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 2.5rem;
+`
+
+const FeaturedView = styled.p`
+	cursor: pointer;
+	text-transform: uppercase;
+	color: ${({ theme }) => theme.colors.blue};
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	font-size: 2.4rem;
+
+	p {
+		margin-right: 1rem;
+	}
+
+	img {
+		height: 1rem;
+	}
+
+	${media.xs} {
+		justify-content: center;
 	}
 `
 
@@ -393,7 +444,41 @@ const Home = () => {
 				</WhyMain>
 			</WhySection>
 			<FeaturedSection>
-				<Container>Hello</Container>
+				<Container>
+					<FeaturedGrid>
+						<FeaturedMain>
+							<FeaturedTitle>featured bundles</FeaturedTitle>
+							<FeaturedView>
+								<p>view all bundles</p>
+								<img src='/images/arrow-right.svg' />
+							</FeaturedView>
+						</FeaturedMain>
+						<FeaturedCard
+							img='/images/featured-1.png'
+							title='workout starter'
+							desc='Get started with the essentials at gym at our most affordable price.'
+							width={686}
+							height={980}
+							number={1}
+						/>
+						<FeaturedCard
+							img='/images/featured-2.png'
+							title='hiking advanced'
+							desc='Get everything you need to get the most of the outdoors while out on the trails. '
+							width={686}
+							height={980}
+							number={2}
+						/>
+						<FeaturedCard
+							img='/images/featured-3.png'
+							title='Running value'
+							desc='Get a haul of running gear to help hit your daily plateaus at our most competitive price. '
+							width={686}
+							height={980}
+							number={3}
+						/>
+					</FeaturedGrid>
+				</Container>
 			</FeaturedSection>
 			<Footer />
 		</>
