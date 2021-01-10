@@ -69,6 +69,7 @@ export const FooterEmailInput = styled.input`
 	margin: 0.75rem 1rem;
 	border: none;
 	outline: none;
+	font-size: 1.8rem;
 `
 
 export const FooterEmailBtn = styled.button.attrs(() => ({ type: 'submit' }))`
