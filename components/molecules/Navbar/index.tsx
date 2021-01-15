@@ -1,16 +1,32 @@
 import { Container } from '@components/atoms'
 import { NavbarWrap, NavLogo, NavSearch, NavSearchInput, NavSearchBtn, NavLink, NavLinksWrap } from './styles'
+import Link from 'next/link'
+import { FC } from 'react'
 
-const Navbar = () => {
+interface NavbarProps {
+	className?: string
+}
+
+const Navbar: FC<NavbarProps> = ({ className }) => {
 	return (
-		<NavbarWrap>
+		<NavbarWrap className={className}>
 			<Container>
-				<NavLogo>elere</NavLogo>
+				<Link href='/'>
+					<NavLogo>elere</NavLogo>
+				</Link>
 				<NavLinksWrap>
-					<NavLink>home</NavLink>
-					<NavLink>about</NavLink>
-					<NavLink>bundle</NavLink>
-					<NavLink>shop</NavLink>
+					<Link href='/'>
+						<NavLink>home</NavLink>
+					</Link>
+					<Link href='/about'>
+						<NavLink>about</NavLink>
+					</Link>
+					<Link href='/bundle'>
+						<NavLink>bundle</NavLink>
+					</Link>
+					<Link href='/'>
+						<NavLink>shop</NavLink>
+					</Link>
 				</NavLinksWrap>
 				<NavSearch>
 					<NavSearchInput placeholder='Search...' />

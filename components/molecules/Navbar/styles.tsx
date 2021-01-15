@@ -2,6 +2,8 @@ import { Container } from '@components/atoms'
 import styled from 'styled-components'
 
 export const NavbarWrap = styled.nav`
+	border-bottom: 1px solid #f5f5f5;
+
 	${Container} {
 		display: flex;
 		justify-content: space-between;
@@ -12,6 +14,7 @@ export const NavbarWrap = styled.nav`
 `
 
 export const NavLogo = styled.p`
+	cursor: pointer;
 	text-transform: uppercase;
 	font-family: ${({ theme }) => theme.fonts.heading};
 	font-size: 3rem;
@@ -50,13 +53,15 @@ export const NavSearchBtn = styled.button.attrs(() => ({ type: 'submit' }))`
 
 export const NavLinksWrap = styled.div`
 	display: flex;
-	& > *:not(:last-child) {
+	& > a:not(:last-child) {
 		margin-right: 4rem;
 	}
 `
 
-export const NavLink = styled.p`
+export const NavLink = styled.a`
 	cursor: pointer;
 	text-transform: uppercase;
 	font-size: 2rem;
+	text-decoration: none;
+	color: inherit;
 `

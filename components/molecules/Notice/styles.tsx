@@ -1,14 +1,9 @@
 import { Container } from '@components/atoms'
-import { media } from 'style'
 import styled from 'styled-components'
 
 export const NoticeWrap = styled.div`
 	background-color: ${({ theme }) => theme.colors.blue};
 	color: ${({ theme }) => theme.colors.white};
-
-	${media.md} {
-		background-color: ${({ theme }) => theme.colors.black};
-	}
 
 	${Container} {
 		padding-top: 1.5rem;
@@ -20,6 +15,8 @@ export const NoticeWrap = styled.div`
 
 export const NoticeRight = styled.div`
 	display: flex;
+	align-items: center;
+
 	*:not(:last-child) {
 		margin-right: 4rem;
 	}

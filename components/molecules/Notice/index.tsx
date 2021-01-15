@@ -1,9 +1,14 @@
 import { Container } from '@components/atoms'
+import { FC } from 'react'
 import { NoticeRight, NoticeWrap } from './styles'
 
-const Notice = () => {
+interface NoticeProps {
+	className?: string
+}
+
+const Notice: FC<NoticeProps> = ({ className }) => {
 	return (
-		<NoticeWrap>
+		<NoticeWrap className={className}>
 			<Container>
 				<p>Contact Us (123)-456-789</p>
 				<NoticeRight>

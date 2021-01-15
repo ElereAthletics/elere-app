@@ -5,6 +5,16 @@ import Image from 'next/image'
 import { media } from 'style'
 import styled from 'styled-components'
 
+const HomeNavbar = styled(Navbar)`
+	border: none;
+`
+
+const HomeNotice = styled(Notice)`
+	${media.md} {
+		background-color: ${({ theme }) => theme.colors.black};
+	}
+`
+
 const Header = styled.header`
 	position: relative;
 
@@ -301,7 +311,7 @@ const FeaturedTitle = styled.h2`
 	margin-bottom: 2.5rem;
 `
 
-const FeaturedView = styled.p`
+const FeaturedView = styled.div`
 	cursor: pointer;
 	text-transform: uppercase;
 	color: ${({ theme }) => theme.colors.blue};
@@ -329,7 +339,7 @@ const Home = () => {
 			<Head>
 				<title>Elere | Home</title>
 			</Head>
-			<Notice />
+			<HomeNotice />
 			<Header>
 				<HeaderBackground>
 					<Image
@@ -341,7 +351,7 @@ const Home = () => {
 					/>
 				</HeaderBackground>
 				<HeaderMain>
-					<Navbar />
+					<HomeNavbar />
 					<HeaderContainer>
 						<Container>
 							<HeaderContent>
@@ -354,7 +364,7 @@ const Home = () => {
 								<HeaderBtn size='lg'>get started</HeaderBtn>
 							</HeaderContent>
 							<HeaderImg>
-								<Image src='/images/hero.png' layout='fill' objectFit='contain' />
+								<Image src='/images/hero.png' layout='fill' objectFit='contain' priority />
 							</HeaderImg>
 						</Container>
 					</HeaderContainer>
