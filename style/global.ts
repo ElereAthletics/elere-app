@@ -47,12 +47,10 @@ export default createGlobalStyle`
 		font-family: 'Karla', sans-serif;
 		font-weight: 400;
 		color: #010822;
-		line-height: 3.5rem;
 	}
 
 	h1,h2,h3,h4,h5,h6 {
 		font-family: 'Rubik', sans-serif;
-		line-height: normal;
 	}
 	
 	input, select, textarea, button{font-family:inherit;}

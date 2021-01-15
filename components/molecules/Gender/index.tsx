@@ -1,5 +1,12 @@
+import { GenderContainer, GenderFemale, GenderMale } from './styles'
+
 const Gender = () => {
-	return <div>Gender</div>
+	return (
+		<GenderContainer>
+			<GenderFemale>hello</GenderFemale>
+			<GenderMale>hello</GenderMale>
+		</GenderContainer>
+	)
 }
 
 export default Gender
