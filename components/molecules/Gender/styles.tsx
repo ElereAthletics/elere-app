@@ -31,6 +31,7 @@ export const ShoppingFor = styled.h1`
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	text-transform: uppercase;
 	transform: translate(-50%, -50%) rotate(-90deg);
 
 	${media.sm} {

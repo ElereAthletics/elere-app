@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { media } from 'style'
 import styled from 'styled-components'
+import Link from 'next/link'
 
 const HomeNavbar = styled(Navbar)`
 	border: none;
@@ -361,7 +362,9 @@ const Home = () => {
 								<HeaderSubTitle>
 									Whatever your passion, whatever your goal, let us help you achieve it
 								</HeaderSubTitle>
-								<HeaderBtn size='lg'>get started</HeaderBtn>
+								<Link href='/bundle'>
+									<HeaderBtn size='lg'>get started</HeaderBtn>
+								</Link>
 							</HeaderContent>
 							<HeaderImg>
 								<Image src='/images/hero.png' layout='fill' objectFit='contain' priority />

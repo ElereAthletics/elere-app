@@ -10,44 +10,37 @@ import {
 	GenderTitleContainer,
 	ShoppingFor,
 } from './styles'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 const Gender = () => {
 	const router = useRouter()
 
-	const MaleClickHandler = () => {
-		router.push({
-			query: { gender: 'male' },
-		})
-	}
-
-	const FemaleClickHandler = () => {
-		router.push({
-			query: { gender: 'female' },
-		})
-	}
-
 	return (
 		<GenderContainer>
 			<ShoppingFor>Shopping For</ShoppingFor>
-			<GenderFemale onClick={FemaleClickHandler}>
-				<GenderTitleContainer>
-					<GenderTitle>female</GenderTitle>
-					<GenderLine></GenderLine>
-				</GenderTitleContainer>
-				<GenderFemaleImg>
-					<Image src='/images/female.png' layout='fill' objectFit='contain' />
-				</GenderFemaleImg>
-			</GenderFemale>
-			<GenderMale onClick={MaleClickHandler}>
-				<GenderTitleContainer>
-					<GenderTitle>male</GenderTitle>
-					<GenderLine></GenderLine>
-				</GenderTitleContainer>
-				<GenderMaleImg>
-					<Image src='/images/male.png' layout='fill' objectFit='contain' />
-				</GenderMaleImg>
-			</GenderMale>
+			<Link href={`${router.pathname}/female`}>
+				<GenderFemale>
+					<GenderTitleContainer>
+						<GenderTitle>female</GenderTitle>
+						<GenderLine></GenderLine>
+					</GenderTitleContainer>
+					<GenderFemaleImg>
+						<Image src='/images/female.png' layout='fill' objectFit='contain' priority />
+					</GenderFemaleImg>
+				</GenderFemale>
+			</Link>
+			<Link href={`${router.pathname}/male`}>
+				<GenderMale>
+					<GenderTitleContainer>
+						<GenderTitle>male</GenderTitle>
+						<GenderLine></GenderLine>
+					</GenderTitleContainer>
+					<GenderMaleImg>
+						<Image src='/images/male.png' layout='fill' objectFit='contain' priority />
+					</GenderMaleImg>
+				</GenderMale>
+			</Link>
 		</GenderContainer>
 	)
 }
