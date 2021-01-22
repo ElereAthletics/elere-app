@@ -7,6 +7,10 @@ export default createGlobalStyle`
 		padding: 0;
 	}
 
+	p {
+		line-height: 1.8em;
+	}
+
 	html, body {
 		height: 100%;
     width: 100%;

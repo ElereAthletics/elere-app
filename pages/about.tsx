@@ -34,7 +34,7 @@ const AboutSubTitle = styled.p`
 
 const AboutContent = styled.div`
 	display: grid;
-	grid-template-columns: 3fr 2fr;
+	grid-template-columns: 2fr 3fr;
 	align-items: center;
 	column-gap: 10rem;
 `
@@ -81,6 +81,9 @@ const About = () => {
 						covenient, and simple way to get everything you need to start your fitness journey.
 					</AboutSubTitle>
 					<AboutContent>
+						<AboutGoalImg>
+							<Image src='/images/goal.png' width={678} height={846} />
+						</AboutGoalImg>
 						<AboutGoalWrap>
 							<AboutGoalTitle>
 								our <span>goal</span>
@@ -98,9 +101,6 @@ const About = () => {
 								while providing the best bang for your buck.
 							</p>
 						</AboutGoalWrap>
-						<AboutGoalImg>
-							<Image src='/images/goal.png' width={678} height={846} />
-						</AboutGoalImg>
 					</AboutContent>
 				</Container>
 			</AboutSection>
