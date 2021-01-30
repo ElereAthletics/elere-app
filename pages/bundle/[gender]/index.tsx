@@ -34,7 +34,7 @@ const BundleSubTitle = styled.p`
 
 const BundleGrid = styled.div`
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
 	max-width: 90rem;
 	margin-right: auto;
 	margin-left: auto;
@@ -52,12 +52,10 @@ const Bundles = [
 	{
 		img: '/images/gym.png',
 		title: 'gym',
-		desc: 'Coming soon...',
 	},
 	{
 		img: '/images/running.png',
 		title: 'running',
-		desc: 'Coming soon...',
 	},
 ]
 
