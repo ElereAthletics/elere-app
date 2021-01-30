@@ -1,10 +1,11 @@
 import { BtnSecondary, Button, Container } from '@components/atoms'
-import { FeaturedCard, Footer, Navbar, Notice } from '@components/molecules'
+import { Footer, Navbar, Notice } from '@components/molecules'
 import Head from 'next/head'
 import Image from 'next/image'
 import { media } from 'style'
 import styled from 'styled-components'
 import Link from 'next/link'
+import ReactPlayer from 'react-player/youtube'
 
 const HomeNavbar = styled(Navbar)`
 	border: none;
@@ -279,60 +280,90 @@ const PillarsContainer = styled.div`
 	}
 `
 
-const FeaturedSection = styled.section`
-	${Container} {
-		padding-top: 15rem;
-		padding-bottom: 15rem;
-		display: flex;
-		justify-content: center;
-	}
-`
-
-const FeaturedGrid = styled.section`
-	width: 100%;
-	max-width: 80rem;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	column-gap: 7.5rem;
-	row-gap: 7rem;
-
-	${media.xs} {
-		grid-template-columns: 1fr;
-		max-width: 40rem;
-		text-align: center;
-	}
-`
-
-const FeaturedMain = styled.div``
-
-const FeaturedTitle = styled.h2`
+const DemoTitle = styled.h2`
 	font-size: 6.5rem;
 	text-transform: uppercase;
 	font-weight: 700;
-	margin-bottom: 2.5rem;
+	margin-bottom: 4rem;
+	text-align: center;
 `
 
-const FeaturedView = styled.div`
-	cursor: pointer;
-	text-transform: uppercase;
-	color: ${({ theme }) => theme.colors.blue};
-	font-weight: 700;
-	display: flex;
-	align-items: center;
-	font-size: 2.4rem;
-
-	p {
-		margin-right: 1rem;
-	}
-
-	img {
-		height: 1rem;
-	}
-
-	${media.xs} {
-		justify-content: center;
+const DemoSection = styled.div`
+	${Container} {
+		padding-top: 15rem;
+		padding-bottom: 15rem;
 	}
 `
+
+const DemoVidOuter = styled.div`
+	max-width: 800px;
+	margin: 0 auto;
+`
+
+const DemoVidWrapper = styled.div`
+	position: relative;
+	padding-top: 56.25%;
+`
+
+const DemoVid = styled(ReactPlayer)`
+	position: absolute;
+	top: 0;
+	left: 0;
+`
+// const FeaturedSection = styled.section`
+// 	${Container} {
+// 		padding-top: 15rem;
+// 		padding-bottom: 15rem;
+// 		display: flex;
+// 		justify-content: center;
+// 	}
+// `
+
+// const FeaturedGrid = styled.section`
+// 	width: 100%;
+// 	max-width: 80rem;
+// 	display: grid;
+// 	grid-template-columns: 1fr 1fr;
+// 	column-gap: 7.5rem;
+// 	row-gap: 7rem;
+
+// 	${media.xs} {
+// 		grid-template-columns: 1fr;
+// 		max-width: 40rem;
+// 		text-align: center;
+// 	}
+// `
+
+// const FeaturedMain = styled.div``
+
+// const FeaturedTitle = styled.h2`
+// 	font-size: 6.5rem;
+// 	text-transform: uppercase;
+// 	font-weight: 700;
+// 	margin-bottom: 2.5rem;
+// `
+
+// const FeaturedView = styled.div`
+// 	cursor: pointer;
+// 	text-transform: uppercase;
+// 	color: ${({ theme }) => theme.colors.blue};
+// 	font-weight: 700;
+// 	display: flex;
+// 	align-items: center;
+// 	font-size: 2.4rem;
+
+// 	p {
+// 		margin-right: 1rem;
+// 	}
+
+// 	img {
+// 		height: 1rem;
+// 	}
+
+// 	${media.xs} {
+// 		justify-content: center;
+// 	}
+// `
 
 const Home = () => {
 	return (
@@ -456,7 +487,22 @@ const Home = () => {
 					</Container>
 				</WhyMain>
 			</WhySection>
-			<FeaturedSection>
+			<DemoSection>
+				<Container>
+					<DemoTitle>demo video</DemoTitle>
+					<DemoVidOuter>
+						<DemoVidWrapper>
+							<DemoVid
+								url='https://www.youtube.com/watch?v=TkHXilmz8MA'
+								controls={true}
+								width='100%'
+								height='100%'
+							/>
+						</DemoVidWrapper>
+					</DemoVidOuter>
+				</Container>
+			</DemoSection>
+			{/* <FeaturedSection>
 				<Container>
 					<FeaturedGrid>
 						<FeaturedMain>
@@ -492,7 +538,7 @@ const Home = () => {
 						/>
 					</FeaturedGrid>
 				</Container>
-			</FeaturedSection>
+			</FeaturedSection> */}
 			<Footer />
 		</>
 	)
