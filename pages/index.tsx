@@ -212,7 +212,7 @@ const WhyImg = styled.div`
 const WhyTitle = styled.h2`
 	font-size: 6.5rem;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 500;
 	margin-bottom: 2.5rem;
 `
 
@@ -283,26 +283,27 @@ const PillarsContainer = styled.div`
 const DemoTitle = styled.h2`
 	font-size: 6.5rem;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 500;
 	margin-bottom: 4rem;
 	text-align: center;
 `
 
-const DemoSection = styled.div`
+const DemoSection = styled.section`
 	${Container} {
-		padding-top: 15rem;
-		padding-bottom: 15rem;
+		padding-top: 10rem;
+		padding-bottom: 10rem;
 	}
 `
 
 const DemoVidOuter = styled.div`
-	max-width: 800px;
+	max-width: 900px;
 	margin: 0 auto;
 `
 
 const DemoVidWrapper = styled.div`
 	position: relative;
 	padding-top: 56.25%;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 `
 
 const DemoVid = styled(ReactPlayer)`
@@ -310,6 +311,63 @@ const DemoVid = styled(ReactPlayer)`
 	top: 0;
 	left: 0;
 `
+
+const SubscribeSection = styled.section`
+	background-color: ${({ theme }) => theme.colors['white-dark']};
+
+	${Container} {
+		padding-top: 15rem;
+		padding-bottom: 15rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+`
+
+const SubscribeTitle = styled.h2`
+	font-size: 6.5rem;
+	text-transform: uppercase;
+	font-weight: 500;
+	margin-bottom: 3rem;
+`
+
+const SubscribeDesc = styled.p`
+	font-size: 2.2rem;
+	text-align: center;
+	max-width: 80rem;
+	color: #525252;
+	margin-bottom: 6rem;
+`
+
+const EmailBox = styled.div`
+	display: flex;
+	margin-bottom: 6rem;
+`
+
+const EmailInput = styled.input.attrs(() => ({
+	placeholder: 'Enter your email',
+	type: 'email',
+}))`
+	border: 1px solid #bebebe;
+	font-size: 2.6rem;
+	outline: none;
+	padding: 1rem 1.5rem;
+`
+
+const EmailBtn = styled.button.attrs(() => ({
+	type: 'submit',
+}))`
+	background-color: ${({ theme }) => theme.colors.blue};
+	border: none;
+	outline: none;
+	color: white;
+	font-size: 2.6rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	cursor: pointer;
+`
+
 // const FeaturedSection = styled.section`
 // 	${Container} {
 // 		padding-top: 15rem;
@@ -493,7 +551,7 @@ const Home = () => {
 					<DemoVidOuter>
 						<DemoVidWrapper>
 							<DemoVid
-								url='https://www.youtube.com/watch?v=TkHXilmz8MA'
+								url='https://www.youtube.com/watch?v=SnhNPDlqnxA&feature=youtu.be'
 								controls={true}
 								width='100%'
 								height='100%'
@@ -502,6 +560,19 @@ const Home = () => {
 					</DemoVidOuter>
 				</Container>
 			</DemoSection>
+			<SubscribeSection>
+				<Container>
+					<SubscribeTitle>Let&apos;s Stay In Touch</SubscribeTitle>
+					<SubscribeDesc>
+						We&apos;re not quite ready yet, so if you want to stay updated on what we&apos;re doing,
+						and to be notified about our launch, subscribe to our email.{' '}
+					</SubscribeDesc>
+					<EmailBox>
+						<EmailInput />
+						<EmailBtn>Subscribe</EmailBtn>
+					</EmailBox>
+				</Container>
+			</SubscribeSection>
 			{/* <FeaturedSection>
 				<Container>
 					<FeaturedGrid>
