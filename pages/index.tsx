@@ -545,7 +545,7 @@ const Home = () => {
 					</Container>
 				</WhyMain>
 			</WhySection>
-			<DemoSection>
+			<DemoSection id='demo'>
 				<Container>
 					<DemoTitle>demo video</DemoTitle>
 					<DemoVidOuter>

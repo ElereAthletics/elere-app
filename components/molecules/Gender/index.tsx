@@ -26,7 +26,7 @@ const Gender = () => {
 						<GenderLine></GenderLine>
 					</GenderTitleContainer>
 					<GenderFemaleImg>
-						<Image src='/images/female.png' layout='fill' objectFit='contain' priority />
+						<Image src='/images/female.png' layout='fill' objectFit='contain' priority={true} />
 					</GenderFemaleImg>
 				</GenderFemale>
 			</Link>
@@ -37,7 +37,7 @@ const Gender = () => {
 						<GenderLine></GenderLine>
 					</GenderTitleContainer>
 					<GenderMaleImg>
-						<Image src='/images/male.png' layout='fill' objectFit='contain' priority />
+						<Image src='/images/male.png' layout='fill' objectFit='contain' priority={true} />
 					</GenderMaleImg>
 				</GenderMale>
 			</Link>

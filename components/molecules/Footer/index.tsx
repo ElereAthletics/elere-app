@@ -34,8 +34,7 @@ const Footer = () => {
 					</FooterColumn>
 					<FooterColumn>
 						<FooterSubTitle>Contact us</FooterSubTitle>
-						<FooterItem>Phone: (123)-456-789</FooterItem>
-						<FooterItem>Email: email@email.com</FooterItem>
+						<FooterItem>Email: elereathletics@gmail.com</FooterItem>
 						<FooterIcons>
 							<FooterIcon src='/images/facebook.svg' />
 							<FooterIcon src='/images/instagram.svg' />

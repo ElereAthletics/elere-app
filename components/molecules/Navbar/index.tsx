@@ -24,7 +24,7 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
 					<Link href='/bundle'>
 						<NavLink>bundle</NavLink>
 					</Link>
-					<Link href='/'>
+					<Link href='/shop'>
 						<NavLink>shop</NavLink>
 					</Link>
 				</NavLinksWrap>
