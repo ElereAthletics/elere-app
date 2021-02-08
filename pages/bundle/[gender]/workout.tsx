@@ -1,5 +1,5 @@
 import { Container } from '@components/atoms'
-import { Footer, Navbar } from '@components/molecules'
+import { Footer, Navbar, Notice } from '@components/molecules'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { media } from 'style'
@@ -134,6 +134,7 @@ const Workout = () => {
 			<Head>
 				<title>Elere | Home Workout</title>
 			</Head>
+			<Notice />
 			<Navbar />
 			<WorkoutContainer>
 				<Container>
