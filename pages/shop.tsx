@@ -1,5 +1,5 @@
 import { Container } from '@components/atoms'
-import { Footer, Navbar, Notice, Subscribe } from '@components/molecules'
+import { Footer, Navbar, Subscribe } from '@components/molecules'
 import Head from 'next/head'
 import Link from 'next/link'
 import styled from 'styled-components'
@@ -66,7 +66,6 @@ const Shop = () => {
 			<Head>
 				<title>Elere | Shop</title>
 			</Head>
-			<Notice />
 			<Navbar />
 			<ShopContainer>
 				<Container>

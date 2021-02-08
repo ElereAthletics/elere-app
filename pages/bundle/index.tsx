@@ -1,4 +1,4 @@
-import { Footer, Gender, Navbar, Notice } from '@components/molecules'
+import { Footer, Gender, Navbar } from '@components/molecules'
 import Head from 'next/head'
 
 const BundleGender = () => {
@@ -7,7 +7,6 @@ const BundleGender = () => {
 			<Head>
 				<title>Elere | Bundle</title>
 			</Head>
-			<Notice />
 			<Navbar />
 			<Gender />
 			<Footer />

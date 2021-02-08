@@ -1,5 +1,5 @@
 import { BtnSecondary, Button, Container } from '@components/atoms'
-import { Footer, Navbar, Notice } from '@components/molecules'
+import { Footer, Navbar } from '@components/molecules'
 import Head from 'next/head'
 import Image from 'next/image'
 import { media } from 'style'
@@ -9,12 +9,6 @@ import ReactPlayer from 'react-player/youtube'
 
 const HomeNavbar = styled(Navbar)`
 	border: none;
-`
-
-const HomeNotice = styled(Notice)`
-	${media.md} {
-		background-color: ${({ theme }) => theme.colors.black};
-	}
 `
 
 const Header = styled.header`
@@ -429,7 +423,6 @@ const Home = () => {
 			<Head>
 				<title>Elere | Home</title>
 			</Head>
-			<HomeNotice />
 			<Header>
 				<HeaderBackground>
 					<Image

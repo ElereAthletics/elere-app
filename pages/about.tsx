@@ -1,5 +1,5 @@
 import { Container } from '@components/atoms'
-import { Footer, Navbar, Notice } from '@components/molecules'
+import { Footer, Navbar } from '@components/molecules'
 import Head from 'next/head'
 import Image from 'next/image'
 import styled from 'styled-components'
@@ -69,7 +69,6 @@ const About = () => {
 			<Head>
 				<title>Elere | About </title>
 			</Head>
-			<Notice />
 			<Navbar />
 			<AboutSection>
 				<Container>

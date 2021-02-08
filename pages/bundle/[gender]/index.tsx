@@ -1,5 +1,5 @@
 import React from 'react'
-import { BundleCard, Footer, Navbar, Notice } from '@components/molecules'
+import { BundleCard, Footer, Navbar } from '@components/molecules'
 import styled from 'styled-components'
 import { Container } from '@components/atoms'
 import Head from 'next/head'
@@ -65,7 +65,6 @@ const BundlePage = () => {
 			<Head>
 				<title>Elere | Bundle</title>
 			</Head>
-			<Notice />
 			<Navbar />
 			<BundleContainer>
 				<Container>
