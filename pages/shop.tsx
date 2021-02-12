@@ -72,8 +72,8 @@ const Shop = () => {
 					<ShopTitle>We&apos;re Not Quite Ready Yet! </ShopTitle>
 					<ShopDesc>
 						We&apos;re sorry, we&apos;re still working on building this out for you! We really
-						appreciate your interest. Sign up for our email and we&apos;ll keep you in loop about our
-						launch, pre-orders, how how you can support us and any news about the company.
+						appreciate your interest. Sign up for our email and we&apos;ll keep you in the loop about
+						our launch, pre-orders, how you can support us and any news about the company.
 					</ShopDesc>
 					<Follow>You can also follow us here: </Follow>
 					<MediaIcons>
