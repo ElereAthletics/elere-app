@@ -36,9 +36,19 @@ const Footer = () => {
 						<FooterSubTitle>Contact us</FooterSubTitle>
 						<FooterItem>Email: elereathletics@gmail.com</FooterItem>
 						<FooterIcons>
-							<FooterIcon src='/images/facebook.svg' />
-							<FooterIcon src='/images/instagram.svg' />
-							<FooterIcon src='/images/twitter.svg' />
+							<a href='https://www.facebook.com/ElereAthletics' target='_blank' rel='noreferrer'>
+								<FooterIcon src='/images/facebook.svg' />
+							</a>
+							<a
+								href='https://www.instagram.com/elereathletics/?igshid=1bl1no6sp67as'
+								target='_blank'
+								rel='noreferrer'
+							>
+								<FooterIcon src='/images/instagram.svg' />
+							</a>
+							<a href='https://twitter.com/elereathletics?s=21' target='_blank' rel='noreferrer'>
+								<FooterIcon src='/images/twitter.svg' />
+							</a>
 						</FooterIcons>
 					</FooterColumn>
 					<FooterColumn>

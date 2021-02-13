@@ -31,7 +31,11 @@ export const FooterSubTitle = styled.p`
 	margin-bottom: 1.5rem;
 `
 
-export const FooterColumn = styled.div``
+export const FooterColumn = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+`
 
 export const FooterItem = styled.p`
 	&:not(:last-child) {
@@ -49,14 +53,15 @@ export const FooterCopyright = styled.p`
 `
 export const FooterIcons = styled(FooterLink)`
 	display: flex;
+	cursor: default;
+
+	& > *:not(:last-child) {
+		margin-right: 2rem;
+	}
 `
 
 export const FooterIcon = styled.img`
 	height: 2rem;
-
-	&:not(:last-child) {
-		margin-right: 2rem;
-	}
 `
 
 export const FooterEmailBox = styled.form`
